@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://dj7r11lrgu67e"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_3eerf"]
+[ext_resource type="Texture2D" uid="uid://ce7yaprwtf56k" path="res://i.png" id="2_v1v0l"]
+[ext_resource type="AudioStream" uid="uid://cesgmswmkcsxs" path="res://ssstwitter.com_1733725256008.mp3" id="3_rw3it"]
+[ext_resource type="Texture2D" uid="uid://bd7mmwa211kjd" path="res://JermaSus.webp" id="4_l26fk"]
+[ext_resource type="AudioStream" uid="uid://bay5yseqp1e4v" path="res://sounds_aa.mp3" id="5_8oj36"]
+[ext_resource type="Texture2D" uid="uid://dhja3smd73751" path="res://do-you-guys-remember-jerma-did-this-face-it-was-so-weird-v0-baqndvri1p1b1.webp" id="6_h502j"]
+[ext_resource type="AudioStream" uid="uid://d26ph41f0vikp" path="res://sounds_ee.mp3" id="7_5mgvo"]
+[ext_resource type="Texture2D" uid="uid://by6oyk4y4jntt" path="res://9xywfekneqn91.png" id="8_wwthy"]
+[ext_resource type="AudioStream" uid="uid://5djxqsuovnhp" path="res://sounds_oo.mp3" id="9_qioff"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3eerf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("2_v1v0l")
+
+[node name="no23" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("3_rw3it")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 759.0
+offset_right = 1017.0
+offset_bottom = 236.0
+scale = Vector2(2, 2)
+icon = ExtResource("4_l26fk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button2"]
+stream = ExtResource("5_8oj36")
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 552.0
+offset_right = 1342.0
+offset_bottom = 1198.0
+icon = ExtResource("6_h502j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button3"]
+stream = ExtResource("7_5mgvo")
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 480.0
+offset_right = 496.0
+offset_bottom = 1128.0
+icon = ExtResource("8_wwthy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button4"]
+stream = ExtResource("9_qioff")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
